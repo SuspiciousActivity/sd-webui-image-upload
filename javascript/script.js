@@ -5,10 +5,11 @@ window.addEventListener('load', () => {
 });
 
 function addUploadButton(type) {
+    let uploadButton = gradioApp().querySelector(`#${type}_upload`);
     const parent = gradioApp().querySelector(`#image_buttons_${type}`);
-    if (!parent)
+    if (uploadButton || !parent)
         return;
-    const uploadButton = createUploadButton(`${type}_upload`, type);
+    uploadButton = createUploadButton(`${type}_upload`, type);
     parent.appendChild(uploadButton);
 }
 
