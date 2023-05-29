@@ -1,4 +1,4 @@
-window.addEventListener('load', () => {
+onUiLoaded(() => {
     addUploadButton('txt2img');
     addUploadButton('img2img');
     addUploadButton('extras');
